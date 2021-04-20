@@ -23,7 +23,7 @@ class FoodTruck
     end
   end
 
-  # refactor if time allows
+  # refactor if time allows (move item.price.slice to item class)
   def potential_revenue
     @inventory.sum do |item, quantity|
       item.price.slice(1..-1).to_f * quantity
