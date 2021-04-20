@@ -49,4 +49,11 @@ class Event
       hash
     end
   end
+
+  def overstocked_items
+    list_of_all_food_items.find_all do |item|
+      food_trucks_that_sell(item).length > 1 &&
+      quantity_of_item(item) > 50
+    end
+  end
 end
