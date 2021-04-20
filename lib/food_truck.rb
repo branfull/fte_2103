@@ -22,4 +22,11 @@ class FoodTruck
       @inventory[item] += quantity
     end
   end
+
+  # refactor if time allows
+  def potential_revenue
+    @inventory.sum do |item, quantity|
+      item.price.slice(1..-1).to_f * quantity
+    end
+  end
 end
