@@ -30,7 +30,7 @@ RSpec.describe FoodTruck do
     item1 = Item.new({name: 'Peach Pie (Slice)', price: "$3.75"})
     food_truck.stock(item1, 30)
     it 'adds an item and quantity to the inventory hash' do
-      expect(food_truck.inventory).to eq(item1: 30)
+      expect(food_truck.inventory).to eq(item1 => 30)
     end
   end
 end
