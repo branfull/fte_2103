@@ -13,4 +13,10 @@ RSpec.describe FoodTruck do
       expect(food_truck.inventory).to eq({})
     end
   end
+  describe 'check_stock' do
+    food_truck = FoodTruck.new('Rocky Mountain Pies')
+    it 'returns 0 if an item is has not been stocked' do
+      expect(food_truck.check_stock(item1)).to eq(0)
+    end
+  end
 end
