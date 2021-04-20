@@ -38,7 +38,7 @@ RSpec.describe FoodTruck do
       expect(food_truck.inventory).to eq(item1 => 30)
     end
   end
-  escribe '#potential_revenue' do
+  describe '#potential_revenue' do
     food_truck1 = FoodTruck.new('Rocky Mountain Pies')
     item1 = Item.new({name: 'Peach Pie (Slice)', price: '$3.75'})
     item2 = Item.new({name: 'Apple Pie (Slice)', price: '$2.50'})
@@ -55,5 +55,6 @@ RSpec.describe FoodTruck do
       expect(food_truck1.potential_revenue).to eq(148.75)
       expect(food_truck2.potential_revenue).to eq(345.00)
       expect(food_truck3.potential_revenue).to eq(243.75)
+    end
   end
 end
