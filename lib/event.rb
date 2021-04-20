@@ -56,4 +56,11 @@ class Event
       quantity_of_item(item) > 50
     end
   end
+
+  def sorted_item_list
+    item_names = list_of_all_food_items.map do |item|
+      item.name
+    end
+    item_names.sort
+  end
 end

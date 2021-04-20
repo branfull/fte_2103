@@ -207,7 +207,7 @@ RSpec.describe Event do
     event.add_food_truck(food_truck2)
     event.add_food_truck(food_truck3)
     it 'an array of all items sorted alphabetically' do
-      expect(event.overstocked_items).to eq([item2.name, item4.name, item1.name, item3.name])
+      expect(event.sorted_item_list).to eq([item2.name, item4.name, item1.name, item3.name])
     end
   end
 end
